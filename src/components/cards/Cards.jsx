@@ -27,7 +27,7 @@ const Cards = () => {
         
    
     return (
-        <CardsList prorp={product}/>
+        <CardsList prop={product}/>
             
 
     )
