@@ -3,24 +3,28 @@
 
 const CardsList = (items) => {
 const props = items.prop
+
+const onClick = e =>{
+ console.log(e.target)
+
+}
   
 
     return (
         console.log(items.prop),
         
         <ul className=''>
-        {props.length>0&&props.map((prop) => (
-          <li key={prop.name} className=''>
+        {props&&props.map((prop) => (
+          <li key={prop.name} onClick={onClick}  className=''>
               <p>{prop.category}</p>
               <h2>{prop.name}</h2>
               <p>{prop.price}</p>
 
             <button
             type="button"
-            onClick=''
-            className=''
+            className=''            
           >
-            <span className=''>BUY</span>
+            BUY
           </button>
         </li>
       ))}
