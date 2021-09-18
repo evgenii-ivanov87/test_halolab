@@ -5,7 +5,8 @@ const CardsList = (items) => {
 const props = items.prop
 
 const onClick = e =>{
- console.log(e.target)
+  const event = Object.assign({},e)
+ console.log(event)
 
 }
   
@@ -22,8 +23,9 @@ const onClick = e =>{
 
             <button
             type="button"
-            className=''            
-          >
+            className=''  
+                      
+          >  
             BUY
           </button>
         </li>
