@@ -5,8 +5,12 @@ const CardsList = (items) => {
 const props = items.prop
 
 const onClick = e =>{
+<<<<<<< Updated upstream
   const event = Object.assign({},e)
  console.log(event)
+=======
+ console.dir(this.prop)
+>>>>>>> Stashed changes
 
 }
   
