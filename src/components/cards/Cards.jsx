@@ -3,7 +3,8 @@ import axios from 'axios'
 import CardsList from './cardsList'
 
 const Cards = () => {
-    const [product, setProducts] = useState();
+  const [product, setProducts] = useState();
+  const [currentIthem, setCurrentIthem] = useState();
     const fetchProdutList = () => {   
   
   try {
@@ -24,10 +25,13 @@ const Cards = () => {
     useEffect(() => {  
     fetchProdutList()
        },[])
-        
-   
+      
+  const onCurrentIthem = (cart) => {
+         setCurrentIthem(cart)
+       }
+   console.log(currentIthem)
     return (
-        <CardsList prop={product}/>
+      <CardsList prop={product} onClick={onCurrentIthem}/>
             
 
     )

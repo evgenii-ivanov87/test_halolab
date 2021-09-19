@@ -1,17 +1,14 @@
-
+import React from "react"
 
 
 const CardsList = (items) => {
-const props = items.prop
+const carts = items.prop
 
-const onClick = e =>{
-<<<<<<< Updated upstream
-  const event = Object.assign({},e)
- console.log(event)
-=======
- console.dir(this.prop)
->>>>>>> Stashed changes
 
+const currentIthem = () =>{
+
+  
+console.log()
 }
   
 
@@ -19,16 +16,16 @@ const onClick = e =>{
         console.log(items.prop),
         
         <ul className=''>
-        {props&&props.map((prop) => (
-          <li key={prop.name} onClick={onClick}  className=''>
-              <p>{prop.category}</p>
-              <h2>{prop.name}</h2>
-              <p>{prop.price}</p>
+        {carts&&carts.map((cart,index) => (
+          <li key={index}   className=''>
+              <p>{cart.category}</p>
+              <h2>{cart.name}</h2>
+              <p>{cart.price}</p>
 
             <button
             type="button"
             className=''  
-                      
+            onClick={((e)=>{currentIthem(cart)})}          
           >  
             BUY
           </button>
